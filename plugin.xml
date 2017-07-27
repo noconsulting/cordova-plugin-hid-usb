@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="ionic-heartbeat-android-plugin"
+        version="0.0.1"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>UsbHid</name>
+
+    <platform name="android">
+        <js-module name="UsbHid" src="www/usbHid.js">
+            <runs/>
+            <clobbers target="usbHid" />
+        </js-module>
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="UsbHid">
+                <param name="android-package" value="fr.noconsulting.UsbHid" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.USB_PERMISSION"/>
+        </config-file>
+        <source-file src="src/android/fr/noconsulting/UsbHid.java" target-dir="src/fr/noconsulting" />
+        <source-file src="src/android/fr/noconsulting/UsbBroadcastReceiver.java" target-dir="src/fr/noconsulting" />
+    </platform>
+</plugin>

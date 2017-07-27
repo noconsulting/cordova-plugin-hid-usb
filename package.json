@@ -1,0 +1,26 @@
+{
+  "name": "ionic-heartbeat-android-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.noconsulting.fr/poc-heartbeat/ionic-heartbeat-android-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "cordova": {
+    "id": "ionic-heartbeat-android-plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "peerDependencies": {
+    "@ionic-native/core": "^3.6.0 || >=4.0.0",
+    "@angular/core": "*",
+    "rxjs": "^5.0.1"
+  }
+}
